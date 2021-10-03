@@ -16,7 +16,7 @@ This repository is a lightweight Slack app, built with the the [**Block Builder*
 
 The rest of this document walks you through setting up and running the app. It does assume that you are familiar with cloning and downloading GitHub repositories.
 
-### :robot_face: &nbsp; Adding The App To Your Workspace
+### :office: &nbsp; Adding The App To Your Workspace
 
 This Slack app can easily be added to your own workspace and used locally using the Socket Mode:
 
