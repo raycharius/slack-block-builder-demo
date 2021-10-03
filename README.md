@@ -22,9 +22,18 @@ This Slack app can easily be added to your own workspace and used locally using 
 
 * Locate the `manifest.yml` file in the root of this repository
 * Copy the contents to your clipboard
-* Follow the [instructions laid out by Slack](https://api.slack.com/reference/manifests) to install an app via a manifest. 
+* Follow the [instructions laid out by Slack](https://api.slack.com/reference/manifests) to install an app via a manifest.
+* Go into the app's *Basic Information* and click **Install to Workspace**. 
 
+### :wrench: &nbsp; Add Tokens
 
+* Create a file called `.env` in the root of the repository.
+* Copy over the contents of `.env.example` to the file.
+* Go into the *OAuth and Persmissions* section of the app in Slack's dashboard, and copy the *Bot User OAuth Token* to the clipboard.
+* Paste that value to `BOT_TOKEN` in the `.env` file.
+* Go into the *Basic Information* section of the app in Slack's dashboard, scroll down to *App-Level Token*.
+* Click the **Generate Token and Scopes** button, give the token a name and create it, and copy the value to the clipboard.
+* Paste that value to `APP_TOKEN` in the `.env` file.
 
 
    
