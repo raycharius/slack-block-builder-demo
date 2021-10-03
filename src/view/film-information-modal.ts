@@ -15,7 +15,7 @@ export interface FilmInformationArgs {
   film: Film;
 }
 
-export const filmInformation = ({ film }: FilmInformationArgs): SlackViewDto => Modal()
+export const filmInformationModal = ({ film }: FilmInformationArgs): SlackViewDto => Modal()
   .title('Film Information')
   .blocks(
     Section({ text: `${bold('Title:')} ${film.title}` }),

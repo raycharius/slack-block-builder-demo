@@ -23,11 +23,11 @@ const getMenuButton = ({ text, action }: MenuButtonArg) => Button()
   .actionId(JSON.stringify({ action }));
 
 const componentActions = [
-  { text: 'Paginator Component', action: actions.renderAllFilms },
-  { text: 'Accordion Component', action: actions.renderTopFilms },
+  { text: 'Paginator Component', action: actions.renderAllFilmsModal },
+  { text: 'Accordion Component', action: actions.renderTopFilmsModal },
 ];
 
-export const mainMenu = ({ userId }: MainMenuArgs): SlackViewDto => Modal()
+export const mainMenuModal = ({ userId }: MainMenuArgs): SlackViewDto => Modal()
   .title('Block Builder Demo')
   .blocks(
     Section({ text: `Hey there, ${user(userId)}! :wave::skin-tone-4:` }),

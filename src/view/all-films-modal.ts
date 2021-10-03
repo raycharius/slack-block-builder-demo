@@ -23,7 +23,7 @@ export interface AllFilmsArgs {
   totalFilms: number;
 }
 
-export const allFilms = (params: AllFilmsArgs): SlackViewDto => Modal()
+export const allFilmsModal = (params: AllFilmsArgs): SlackViewDto => Modal()
   .title('All Films')
   .blocks(
     Section({ text: `Hey there, ${user(params.userId)}! :wave::skin-tone-4:` }),
@@ -33,13 +33,13 @@ export const allFilms = (params: AllFilmsArgs): SlackViewDto => Modal()
       perPage: params.perPage,
       page: params.page,
       totalItems: params.totalFilms,
-      actionId: ({ offset, page }) => JSON.stringify({ action: actions.renderAllFilms, page, offset }),
+      actionId: ({ offset, page }) => JSON.stringify({ action: actions.renderAllFilmsModal, page, offset }),
       blocksForEach: ({ item: film }) => [
         Divider(),
         Section({ text: `${bold(':film_frames:  Title:')} ${film.title}` })
           .accessory(
             Button({ text: 'More Information' })
-              .actionId(JSON.stringify({ action: actions.renderFilmInfo, filmId: film.id })),
+              .actionId(JSON.stringify({ action: actions.renderFilmInfoModal, filmId: film.id })),
           ),
         Section()
           .fields(

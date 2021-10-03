@@ -1,4 +1,4 @@
-import { allFilms } from '../view';
+import { allFilmsModal } from '../view';
 import { filmRepository } from '../services';
 
 import type { ActionMw } from '../types';
@@ -9,7 +9,7 @@ export interface PaginatedAction {
   offset?: number;
 }
 
-export const renderAllFilms: ActionMw = async ({
+export const renderAllFilmsModal: ActionMw = async ({
   action, client, ack, body,
 }) => {
   const actionId: PaginatedAction = JSON.parse(action.action_id);
@@ -25,7 +25,7 @@ export const renderAllFilms: ActionMw = async ({
     filmRepository.countAll(),
   ]);
 
-  const view = allFilms({
+  const view = allFilmsModal({
     films,
     totalFilms,
     perPage,

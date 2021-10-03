@@ -1,3 +1,4 @@
-export * from './all-films';
-export * from './film-information';
-export * from './main-menu';
+export * from './all-films-modal';
+export * from './film-information-modal';
+export * from './main-menu-modal';
+export * from './top-films-modal';

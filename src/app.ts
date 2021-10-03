@@ -12,11 +12,11 @@ const app = new App({
   appToken: process.env.APP_TOKEN,
 });
 
-app.command(commands.blockBuilder, listeners.renderMainMenu);
+app.command(commands.blockBuilder, listeners.renderMainMenuModal);
 
-app.action(blockActionIncludes(actions.renderAllFilms), listeners.renderAllFilms);
-app.action(blockActionIncludes(actions.renderFilmInfo), listeners.renderFilmInfo);
-app.action(blockActionIncludes(actions.renderTopFilms));
+app.action(blockActionIncludes(actions.renderAllFilmsModal), listeners.renderAllFilmsModal);
+app.action(blockActionIncludes(actions.renderFilmInfoModal), listeners.renderFilmInfoModal);
+app.action(blockActionIncludes(actions.renderTopFilmsModal), listeners.renderTopFilmsModal);
 
 // eslint-disable-next-line no-console
 app.error(async (error) => console.log(error));

@@ -16,4 +16,6 @@ export interface IFilmRepository {
   getAllPaginated(query: GetAllPaginatedQuery): Promise<Film[]>;
 
   countAll(): Promise<number>;
+
+  getTopByQuantity(quantity: number): Promise<Film[]>;
 }

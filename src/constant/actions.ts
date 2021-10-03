@@ -1,5 +1,5 @@
 export const actions = {
-  renderAllFilms: 'renderAllFilms',
-  renderFilmInfo: 'renderFilmInfo',
-  renderTopFilms: 'renderTopFilms',
+  renderAllFilmsModal: 'renderAllFilmsModal',
+  renderFilmInfoModal: 'renderFilmInfoModal',
+  renderTopFilmsModal: 'renderTopFilmsModal',
 };

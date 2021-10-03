@@ -32,4 +32,16 @@ export class FilmCollection implements IFilmRepository {
   public countAll(): Promise<number> {
     return Promise.resolve(this.items.length);
   }
+
+  public getTopByQuantity(quantity: number): Promise<Film[]> {
+    const sorted = this.items
+      .sort((compare, to) => {
+        if (compare.voteAverage === to.voteAverage) {
+          return 0;
+        }
+        return compare.voteAverage > to.voteAverage ? -1 : 1;
+      });
+
+    return Promise.resolve(sorted.slice(0, quantity));
+  }
 }
