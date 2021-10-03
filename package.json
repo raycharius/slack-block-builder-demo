@@ -9,7 +9,9 @@
     "build": "tsc -p ./tsconfig.json",
     "lint": "eslint 'src/**/*.ts'",
     "lint:fix": "eslint 'src/**/*.ts' --fix",
+    "prestart": "npm run build",
     "start": "node ./dist/app",
+    "prestart:local": "npm run build",
     "start:local": "nodemon -L ./dist/server"
   },
   "dependencies": {
