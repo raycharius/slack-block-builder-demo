@@ -1,0 +1,37 @@
+{
+  "name": "slack-block-builder-demo",
+  "version": "1.0.0",
+  "description": "A small demo Slack app that demonstrates the usage of the Block Builder library.",
+  "private": false,
+  "main": "dist/app.js",
+  "author": "Ray East",
+  "scripts": {
+    "build": "tsc -p ./tsconfig.json",
+    "lint": "eslint 'src/**/*.ts'",
+    "lint:fix": "eslint 'src/**/*.ts' --fix",
+    "start": "node ./dist/app",
+    "start:local": "nodemon -L ./dist/server"
+  },
+  "dependencies": {
+    "@slack/bolt": "3.6.0",
+    "dotenv": "8.2.0",
+    "slack-block-builder": "2.2.0",
+    "undefined": "^0.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "14.14.41",
+    "@types/validator": "13.1.3",
+    "@typescript-eslint/eslint-plugin": "4.20.0",
+    "@typescript-eslint/parser": "4.20.0",
+    "eslint": "6.8.0",
+    "eslint-config-airbnb-base": "14.1.0",
+    "eslint-config-airbnb-typescript": "12.3.1",
+    "eslint-plugin-import": "2.22.1",
+    "eslint-plugin-jsx-a11y": "6.4.1",
+    "eslint-plugin-react": "7.23.1",
+    "eslint-plugin-react-hooks": "4.2.0",
+    "nodemon": "2.0.6",
+    "ts-node": "8.10.2",
+    "typescript": "4.4.3"
+  }
+}

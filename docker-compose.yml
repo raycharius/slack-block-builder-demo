@@ -1,0 +1,12 @@
+version: '3'
+services:
+  node:
+    image: node:16.10.0
+    working_dir: /app
+    command: bash -c "
+      set -ex \
+      && npm install \
+      && npm run start:local"
+    volumes:
+      - ./:/app
+      - /app/node_modules
