@@ -14,6 +14,8 @@ const app = new App({
 
 app.command(commands.blockBuilder, listeners.renderMainMenuModal);
 
+// Checking against a RegEx, as all of the action IDs are stringified objects
+
 app.action(blockActionIncludes(actions.renderAllFilmsModal), listeners.renderAllFilmsModal);
 app.action(blockActionIncludes(actions.renderFilmInfoModal), listeners.renderFilmInfoModal);
 app.action(blockActionIncludes(actions.renderTopFilmsModal), listeners.renderTopFilmsModal);

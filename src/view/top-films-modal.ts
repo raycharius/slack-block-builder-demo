@@ -31,7 +31,8 @@ export const topFilmsModal = (params: TopFilmsArgs): SlackViewDto => Modal()
       expandedItems: params.expandedItems,
       collapseOnExpand: true,
       titleText: ({ item: film }) => bold(film.title),
-      actionId: ({ expandedItems }) => JSON.stringify({ action: actions.renderTopFilmsModal, expandedItems }),
+      actionId: ({ expandedItems }) => JSON
+        .stringify({ action: actions.renderTopFilmsModal, expandedItems }), // All action IDs are stringified objects
       blocksForExpanded: ({ item: film }) => [
         Section({ text: bold('Overview:') }),
         Section({ text: film.overview }),

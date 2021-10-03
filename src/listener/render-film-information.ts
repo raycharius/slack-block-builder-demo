@@ -10,6 +10,8 @@ export interface FilmIdableAction {
 export const renderFilmInfoModal: ActionMw = async ({
   action, client, ack, body,
 }) => {
+
+  // All action IDs are stringified objects
   const actionId: FilmIdableAction = JSON.parse(action.action_id);
 
   await ack();

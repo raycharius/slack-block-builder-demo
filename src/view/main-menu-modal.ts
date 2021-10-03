@@ -20,7 +20,7 @@ type MenuButtonArg = { text: string, action: string };
 
 const getMenuButton = ({ text, action }: MenuButtonArg) => Button()
   .text(text)
-  .actionId(JSON.stringify({ action }));
+  .actionId(JSON.stringify({ action })); // All action IDs are stringified objects
 
 const componentActions = [
   { text: 'Paginator Component', action: actions.renderAllFilmsModal },

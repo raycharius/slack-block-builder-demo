@@ -10,6 +10,8 @@ export interface ExpandableAction {
 export const renderTopFilmsModal: ActionMw = async ({
   action, client, ack, body,
 }) => {
+
+  // All action IDs are stringified objects, here we're extracting the data from the accordion
   const actionId: ExpandableAction = JSON.parse(action.action_id);
 
   await ack();
@@ -18,7 +20,7 @@ export const renderTopFilmsModal: ActionMw = async ({
   const view = topFilmsModal({
     films,
     userId: body.user.id,
-    expandedItems: actionId.expandedItems || [],
+    expandedItems: actionId.expandedItems || [], // If opened with shortcut, this is undefined
   });
 
   if (body.view) {

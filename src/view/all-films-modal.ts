@@ -33,7 +33,8 @@ export const allFilmsModal = (params: AllFilmsArgs): SlackViewDto => Modal()
       perPage: params.perPage,
       page: params.page,
       totalItems: params.totalFilms,
-      actionId: ({ offset, page }) => JSON.stringify({ action: actions.renderAllFilmsModal, page, offset }),
+      actionId: ({ offset, page }) => JSON
+        .stringify({ action: actions.renderAllFilmsModal, page, offset }), // All action IDs are stringified objects
       blocksForEach: ({ item: film }) => [
         Divider(),
         Section({ text: `${bold(':film_frames:  Title:')} ${film.title}` })
