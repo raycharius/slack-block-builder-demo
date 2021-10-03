@@ -25,7 +25,7 @@ This Slack app can easily be added to your own workspace and used locally using 
 * Follow the [instructions laid out by Slack](https://api.slack.com/reference/manifests) to install an app via a manifest.
 * Go into the app's *Basic Information* and click **Install to Workspace**. 
 
-### :wrench: &nbsp; Add Tokens
+### :wrench: &nbsp; Adding The App Tokens
 
 * Create a file called `.env` in the root of the repository.
 * Copy over the contents of `.env.example` to the file.
@@ -35,5 +35,21 @@ This Slack app can easily be added to your own workspace and used locally using 
 * Click the **Generate Token and Scopes** button, give the token a name and create it, and copy the value to the clipboard.
 * Paste that value to `APP_TOKEN` in the `.env` file.
 
+### :whale: &nbsp; Starting The App With Docker (Or Not)
 
+There is a Docker file included in the repository, which is the recommended way of hosting the app locally:
+
+* Make sure that Docker is installed
+* In the terminal, make sure you are in the root of the project
+* Execute the `docker-compose up` command
+* The app should be up and running and ready to accept payloads from your workspace
+
+For those who do not wish to use Docker, just execute `npm run start`.
+
+### :partying_face: &nbsp; Opening The Demo
+
+* Open your Slack workspace
+* Open any conversation or channel
+* Use the `/block-builder` slash command to launch the app's main menu.
+* Have fun!
    
