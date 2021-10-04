@@ -24,8 +24,14 @@ app.action(blockActionIncludes(actions.renderTopFilmsModal), listeners.renderTop
 app.error(async (error) => console.log(error));
 
 (async () => {
-  await app.start();
+  try {
+    await app.start();
 
-  // eslint-disable-next-line no-console
-  console.log('⚡️ Block Builder demo app up and running!');
+    // eslint-disable-next-line no-console
+    console.log('⚡️ Block Builder demo app up and running!');
+  } catch (error) {
+    // eslint-disable-next-line no-console
+    console.log(error);
+    process.exit(1);
+  }
 })();
