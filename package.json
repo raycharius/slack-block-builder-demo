@@ -17,8 +17,7 @@
   "dependencies": {
     "@slack/bolt": "3.6.0",
     "dotenv": "8.2.0",
-    "slack-block-builder": "2.2.0",
-    "undefined": "^0.1.0"
+    "slack-block-builder": "2.3.0"
   },
   "devDependencies": {
     "@types/node": "14.14.41",
