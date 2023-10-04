@@ -32,7 +32,7 @@ This Slack app can easily be added to your own workspace and used locally using 
 * Go into the *OAuth and Persmissions* section of the app in Slack's dashboard, and copy the *Bot User OAuth Token* to the clipboard.
 * Paste that value to `BOT_TOKEN` in the `.env` file.
 * Go into the *Basic Information* section of the app in Slack's dashboard, scroll down to *App-Level Token*.
-* Click the **Generate Token and Scopes** button, give the token a name and create it, and copy the value to the clipboard.
+* Click the **Generate Token and Scopes** button, give the token a name, add scope `connections:write` and create it, and copy the value to the clipboard.
 * Paste that value to `APP_TOKEN` in the `.env` file.
 
 ### :whale: &nbsp; Starting The App With Docker (Or Not)
